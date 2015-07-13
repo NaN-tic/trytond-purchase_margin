@@ -1,0 +1,19 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:purchase.line,list_price:"
+msgid "List Price"
+msgstr "Preu de venda"
+
+msgctxt "field:purchase.line,margin:"
+msgid "Margin"
+msgstr "Marge"
+
+msgctxt "field:purchase.line,margin_percent:"
+msgid "Margin (%)"
+msgstr "Marge (%)"
+
+msgctxt "view:purchase.line:"
+msgid "%"
+msgstr "%"
