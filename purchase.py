@@ -43,7 +43,7 @@ class PurchaseLine:
 
     def on_change_product(self):
         Product = Pool().get('product.product')
-        
+
         res = super(PurchaseLine, self).on_change_product()
 
         list_price = Decimal(0)
