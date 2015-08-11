@@ -7,10 +7,10 @@ from trytond.model import fields
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 from trytond.config import config as config_
-DIGITS = int(config_.get('digits', 'unit_price_digits', 4))
 
 __all__ = ['PurchaseLine']
 __metaclass__ = PoolMeta
+DIGITS = config_.getint('product', 'price_decimal', default=4)
 
 
 class PurchaseLine:
