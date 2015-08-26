@@ -41,17 +41,17 @@ class PurchaseLine:
         return Decimal(str(fabs(self.quantity))) * (self.list_price or
                 Decimal(0))
 
+    @fields.depends('product', 'quantity')
     def on_change_product(self):
         Product = Pool().get('product.product')
 
-        res = super(PurchaseLine, self).on_change_product()
+        super(PurchaseLine, self).on_change_product()
 
-        list_price = Decimal(0)
         if self.product:
-            list_price = Product.get_sale_price([self.product],
-                    self.quantity or 0)[self.product.id]
-        res['list_price'] = list_price
-        return res
+            prices = Product.get_sale_price([self.product], self.quantity or 0)
+            self.list_price = prices[self.product.id]
+        else:
+            self.list_price = Decimal(0)
 
     @fields.depends('type', 'product', 'quantity', 'list_price',
         '_parent_purchase.currency', '_parent_purchase.lines', methods=['amount'])
