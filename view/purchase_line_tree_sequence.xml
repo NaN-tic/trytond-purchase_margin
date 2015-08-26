@@ -5,6 +5,6 @@ copyright notices and license terms. -->
 <data>
     <xpath expr="/tree/field[@name=&quot;amount&quot;]" position="after">
         <field name="margin"/>
-        <field name="margin_percent"/>
+        <field name="margin_percent" factor="100"/>
     </xpath>
 </data>

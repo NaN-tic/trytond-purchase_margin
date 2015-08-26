@@ -4,7 +4,7 @@ The COPYRIGHT file at the top level of this repository contains the full
 copyright notices and license terms. -->
 <data>
     <xpath
-        expr="/form/notebook/page/field[@name=&quot;amount&quot;]"
+        expr="/form/notebook/page/field[@name=&quot;delivery_date&quot;]"
         position="after">
         <label name="margin" xalign="1.0" xexpand="1"/>
         <group id="margin_values" colspan="1" col="3">
