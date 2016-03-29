@@ -9,11 +9,11 @@ from trytond.pyson import Eval
 from trytond.config import config as config_
 
 __all__ = ['PurchaseLine']
-__metaclass__ = PoolMeta
 DIGITS = config_.getint('product', 'price_decimal', default=4)
 
 
 class PurchaseLine:
+    __metaclass__ = PoolMeta
     __name__ = 'purchase.line'
     list_price = fields.Numeric('List Price', digits=(16, DIGITS),
         states={
