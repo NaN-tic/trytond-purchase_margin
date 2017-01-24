@@ -11,7 +11,8 @@ copyright notices and license terms. -->
             <field name="margin" xalign="1.0" xexpand="0"/>
             <field name="margin_percent" factor="100" xalign="1.0" xexpand="0"/>
             <label name="margin_percent" string="%" xalign="0.0" xexpand="1" xfill="1"/>
-            <field name="list_price" invisible="1"/>
         </group>
+        <label name="list_price"/>
+        <field name="list_price"/>
     </xpath>
 </data>
